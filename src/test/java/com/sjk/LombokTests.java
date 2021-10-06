@@ -6,6 +6,7 @@ import com.sjk.domain.Student;
 import com.sjk.domain.UserItem;
 import org.junit.jupiter.api.Test;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -116,7 +117,7 @@ public class LombokTests {
         }
     }*/
 
-    @Test
+   /* @Test
     public void testStudent(){
         Student student1 = new Student();
         student1.setStudentNo(1);
@@ -139,5 +140,45 @@ public class LombokTests {
 
         }
 
+    }*/
+
+   /* @Test
+    public void testNoArgsConstructor(){
+        Board board = new Board();
+
+        System.out.println(board);
+    }*/
+
+   /* @Test
+    public void testRequiredArgsConstructor(){
+        Board board = new Board(1);
+
+        System.out.println(board);
+
+    }
+
+    @Test
+    public void testRequiredArgsConstructor2(){
+        Member member = new Member("userId1", "password1");
+
+        System.out.println(member);
+    }*/
+    /*@Test
+    public void testAllArgsConstructor(){
+        Board board = new Board(1, "title1", "content1", "writer1", new Date());
+
+        System.out.println(board);
+    }*/
+
+    @Test
+    public void testBoardBuilder(){
+        Board board = Board.builder()
+                .boardNo(1)
+                .title("titl1")
+                .content("content")
+                .writer("writer")
+                .regDate(new Date())
+                .build();
+        System.out.println(board);
     }
 }

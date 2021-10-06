@@ -4,11 +4,8 @@ import lombok.*;
 
 import java.util.Date;
 
-
-@Getter
-@Setter
 @ToString
-@EqualsAndHashCode(of="boardNo")
+@Builder
 public class Board{
 
     private int boardNo;
@@ -16,4 +13,6 @@ public class Board{
     private String content;
     private String writer;
     private Date regDate;
+
+
 }
